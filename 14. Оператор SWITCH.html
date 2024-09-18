@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Оператор SWITCH</h1>
+    <script>
+        let name = prompt("Введите свое имя:", "Александр");
+        let pol = prompt("Введите пол (м/ж):", "м");
+
+        switch (pol) {
+            case "м":
+            case "m":
+                alert("Мои приветствия, господин " + name);
+                break;
+            case "ж":
+            case "f":
+                alert("Мои приветствия, госпожа " + name);
+                break;
+            default:
+                alert("Хм-м-м?..");
+        }
+    </script>
+</body>
+</html>
+

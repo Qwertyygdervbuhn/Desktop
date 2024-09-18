@@ -1,1 +1,1 @@
-document.write('Hello World')
+document.write("Hello World<br>Привет,я Александр, мне 17 лет, учусь в колледже IT STEP. Из хобби: активный отдых по типу прогулок и т.д.");
