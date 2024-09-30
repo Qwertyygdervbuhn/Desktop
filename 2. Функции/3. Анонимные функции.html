@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        // display(); // ошибка: функция не объявлена
+        // функциональное выражение
+        let display = function()
+        {  
+            document.write("Анонимная функция в JavaScript" + "<br />");
+        }
+        display();
+        display = function(number)
+        {
+            return number * number;
+        }
+        document.write("Квадрат числа равен: " + display(5));
+    </script>
+</body>
+</html>

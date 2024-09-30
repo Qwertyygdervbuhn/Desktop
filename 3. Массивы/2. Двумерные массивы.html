@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Массивы</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let numbers1 = [0, 1, 2, 3, 4, 5]; // одномерный массив
+        for (let i = 0; i < numbers1.length; i++)
+            document.write(numbers1[i] + "<br />");
+        document.write("<br /><br />");
+
+        let numbers2 = [[0, 1, 2, 3], [4, 5, 6, 7]]; // двумерный массив
+        for (let i = 0; i < numbers2.length; i++)
+        {
+            for (let j = 0; j < numbers2[i].length; j++)
+                document.write(numbers2[i][j] + "  ");
+            document.write("<br />");
+        }
+        document.write("<br /><br />");
+
+        let clubs = [["Динамо", "Киев", 1927], ["Шахтер", "Донецк", 1936], ["Черноморец", "Одесса", 1936]];
+        for (let i = 0; i < clubs.length; i++)
+            document.write(clubs[i] + "<br />");
+        document.write("<br /><br />");
+
+        for (let index1 in clubs)
+        {
+            for (let index2 in clubs)
+                document.write(clubs[index1][index2] + "</br>");
+        }
+            
+    </script>
+</body>
+</html>

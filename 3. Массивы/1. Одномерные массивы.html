@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Массивы</title>
+</head>
+<body>
+    <script>
+        let myArray = new Array(); // пустой массив
+        let myArray2 = []; // пустой массив
+
+        let clubs = ["Динамо", "Шахтер", "Черноморец"];
+        document.write(clubs);
+        document.write("<br /><br />");
+
+        for(let i = 0; i < clubs.length; i++)
+            document.write(clubs[i] + "<br />");
+        document.write("<br /><br />");
+
+        for (let index in clubs)
+            document.write(clubs[index] + "<br />");
+        document.write("<br /><br />");
+
+        document.write(clubs[5] + "<br />"); // undefined - в массиве только три элемента
+        clubs[5] = "Днепр";
+        document.write("<br /><br />");
+
+        for (let i = 0; i < clubs.length; i++)
+            document.write(clubs[i] + "<br />");
+        document.write("<br /><br />");
+
+        for (let index in clubs)
+            document.write(clubs[index] + "<br />");
+    </script>
+</body>
+</html>

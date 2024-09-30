@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        "use strict"; // используем стандарт ECMAScript 5
+
+        var number1 = 5;
+        if (true) {
+            var number1 = 10;
+            alert(number1); // 10 (внутри блока)
+        }
+        alert(number1); // 10 (снаружи блока то же самое)
+
+        let number2 = 15;
+        if (true) {
+            let number2 = 20;
+            alert(number2); // 20 (внутри блока)
+        }
+        alert(number2); // 15 (снаружи блока то же самое)
+
+        alert(number3); // неопределённое значение переменной
+        var number3 = 100;
+
+        // alert(number4); // ошибка выполнения скрипта: переменная не существует
+        let number4 = 100;
+
+        display();
+
+        function display() {
+           alert("Hello!");
+        }
+
+        const n = 5;
+        // n = 10; // ошибка выполнения скрипта: константа защищена от изменения
+    </script>
+</body>
+</html>

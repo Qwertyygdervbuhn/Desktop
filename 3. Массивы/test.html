@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Yes/No Test</title>
+</head>
+<body>
+    <h1>Simple Yes/No Test</h1>
+
+    <button onclick="startTest()">Start Test</button>
+
+    <script>
+        function startTest() {
+            // Массив вопросов
+            var questions = [
+                "Do you like coffee?",
+                "Have you ever traveled abroad?",
+                "Do you play sports?"
+            ];
+
+            // Счет
+            var score = 0;
+
+            // Проходим по каждому вопросу
+            for (var i = 0; i < questions.length; i++) {
+                // Показываем вопрос и ожидаем ответа в диалоговом окне confirm
+                var answer = confirm(questions[i]); // confirm возвращает true, если нажали "ОК", и false, если нажали "Отмена"
+                
+                // Если ответ "Yes" (то есть пользователь нажал "ОК"), увеличиваем счет
+                if (answer === true) {
+                    score++;
+                }
+            }
+
+            // Показываем результат после завершения теста
+            alert("Test completed! Your score is: " + score + " out of " + questions.length);
+        }
+    </script>
+</body>
+</html>
+

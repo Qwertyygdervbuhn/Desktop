@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        // функциональное выражение
+        let display = ()=> document.write("Стрелочная функция в JavaScript" + "<br />");
+        display();
+
+         // функциональное выражение
+        let cube = number => number * number * number;
+
+         // функциональное выражение
+        let square = number => number * number;
+
+        document.write("Квадрат числа равен: " + square(5));
+        document.write("<br>Куб числа равен: " + cube(5));
+
+        let factorial = number => {
+            let result = 1;
+            while (number > 1)
+                result *= number--;
+            return result;
+        };
+
+         document.write("<br>Факториал числа равен: " + factorial(5));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Массивы</title>
+</head>
+<body>
+    <script>
+        function JoinDemo()
+        {
+            /*
+            Возвращает строковое значение, состоящее из сцепленных элементов массива,
+            разделенных указанным разделителем ("separator")
+            */
+            document.write("join<br />");
+            let a, b;
+            a = new Array(0, 1, 2, 3, 4);
+            b = a.join(", ");
+            document.write("Результат работы метода join: " + b);
+            document.write("<br />");
+        }
+
+        function InputArray()
+        {
+            document.write("input<br />");
+            let a = [];
+            let count = 10;
+            for (let i = 0; i < count; i++)
+                a[i] = parseInt(prompt("Введите целое число:", ""));
+            document.write("Массив: " + a.join(", ")); // вывод массива
+            document.write("<br />");
+        }
+
+        function ConcatArrayDemo()
+        {
+            /*
+            Возвращает массив, полученный в результате конкатенации массива "array1" и
+            всех переданных методу значений ("item1", "item2", ...).
+            */
+            document.write("concat<br />");
+            let a, b, c, d;
+            a = new Array(1, 2, 3);
+            b = "JScript";
+            c = new Array(42, "VBScript");
+            d = a.concat(b, c);
+            //Returns the array [1, 2, 3, "JScript", 42, "VBScript"]
+            document.write("Результат работы метода concat: " + d.join(", "));
+            document.write("<br />");
+        }
+
+        function Push_Unshift()
+        {
+            document.write("Push_Unshift<br />");
+            let a = [1, 2, 3];
+            document.write("Исходный массив: " + a.join(", "));
+            document.write("<br />");
+            if (confirm("Добавить в начало?"))
+            {
+                /*
+                Добавляет элементы "item1, item2, ..." в начало массива и возвращает итоговый массив.
+                Порядок следования новых элементов соответствует порядку их перечисления в списке аргументов.
+                */
+                a.unshift(-2, -1, 0);
+            }
+            else
+            {
+                a.push(4, 5, 6); // Добавляет элементы "item1, item2, ..." в конец массива.
+            }
+            document.write("Итоговый массив: " + a.join(", "));
+            document.write("<br />");
+        }
+
+        function Pop_Shift()
+        {
+            document.write("Pop_Shift<br />");
+            let a = new Array(0, 1, 2, 3, 4);
+            document.write("Исходный массив: " + a.join(", "));
+            document.write("<br />");
+            if (confirm("Удалить первый?"))
+            {
+                a.shift(); // Удаляет первый элемент из массива и возвращает его в качестве значения.
+            }
+            else
+            {
+                a.pop(); //Удаляет последний элемент из массива и возвращает его в качестве значения.
+            }
+            document.write("Итоговый массив: " + a.join(", "));
+            document.write("<br />");
+        }
+
+        function SpliceDemo()
+        {
+            /*
+            Удаляет из массива указанное число элементов начиная с позиции "start".
+            При необходимости, заменяет удаленные элементы новыми значениями.
+            Возвращает удаленные элементы в виде массива.
+            */
+            document.write("splice<br />");
+            let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            document.write("Исходный массив: " + a.join(", "));
+            document.write("<br />");
+            a.splice(4, 3 /*, 222, 333, 444, 555*/ );
+            document.write("Итоговый массив: " + a.join(", "));
+            document.write("<br />");
+        }
+
+        function SliceDemo()
+        {
+            /*
+            Возвращает фрагмент массива "array1" начиная от элемента с индексом "start"
+            до элемента с индексом "end" не включая его.
+            Если индекс "end" не указан, фрагмент продолжается до конца массива.
+            */
+            document.write("slice<br />");
+            let a = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+            document.write("Исходный массив: " + a.join(", "));
+            document.write("<br />");
+            let b = a.slice(2, 6);
+            document.write("Итоговый массив: " + b.join(", "));
+            document.write("<br />");
+        }
+
+        function Reverse()
+        {
+            document.write("reverse<br />");
+            let a = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+            document.write("Исходный массив: " + a.join(", "));
+            document.write("<br />");
+            let b = a.reverse(); // Обращает порядок следования элементов в массиве.
+            document.write("Итоговый массив: " + b.join(", "));
+            document.write("<br />");
+        }
+
+        function LengthDemo()
+        {
+            let a;
+            a = new Array(0, 1, 2, 3, 4);
+            document.write("Длина массива: " + a.length);
+            document.write("<br />");
+        }
+
+        // функции сравнения элементов
+        function numUp(a1, a2)
+        {
+            // сортировка по возрастанию
+            return a1 - a2;
+        }
+
+        function numDown(a1, a2)
+        {
+            // сортировка по убыванию
+            return a2 - a1;
+        }
+
+        function SortArray()
+        {
+            /*
+               Сортирует элементы массива. Параметр "sortFunction" может указывать функцию,
+               с помощью которой производится сортировка массива. 
+               Если функция "sortFunction" опущена, то выполняется ASCII-сортировка по возрастанию.
+            */
+
+            let a = [];
+            let count = 5;
+            for (let i = 0; i < count; i++)
+                a[i] = parseInt(prompt("Введите целое число:", ""));
+            document.write("Неотсортированный массив: " + a.join(", ")); // вывод массива
+            document.write("<br />");
+            a.sort();
+            document.write("Строковая сортировка массива: " + a.join(", ")); // вывод массива
+            document.write("<br />");
+            a.sort(numUp);
+            document.write("Числовая сортировка массива: " + a.join(", ")); // вывод массива
+            document.write("<br />");
+            a.sort(numDown);
+            document.write("Числовая сортировка по убыванию: " + a.join(", ")); // вывод массива
+            document.write("<br />");
+        }
+
+        function Search()
+        {
+            document.write("indexOf() и lastIndexOf()<br />");
+            // Методы indexOf() и lastIndexOf() возвращают индекс первого и последнего включения элемента в массиве
+            let fruit = ["яблоко", "груша", "слива", "яблоко", "груша"];
+            let firstIndex = fruit.indexOf("яблоко");
+            let lastIndex = fruit.lastIndexOf("яблоко");
+            let otherIndex = fruit.indexOf("дыня");
+            document.write(firstIndex);
+            document.write("<br />");
+            document.write(lastIndex);
+            document.write("<br />");
+            document.write(otherIndex);
+            document.write("<br />");
+        }
+
+        function condition1(value, index, array)
+        {
+            // Параметр value представляет текущий перебираемый элемент массива, 
+            // параметр index представляет индекс этого элемента, 
+            // а параметр array передает ссылку на массив.
+            let result = false;
+            if (value > 0)
+            {
+                result = true;
+            }
+            return result;
+        };
+
+        function Every()
+        {
+            document.write("every<br />");
+            let numbers = [1, -12, 8, -4, 25, 42];
+            /*
+            Метод every() проверяет, все ли элементы соответствуют определенному условию.
+            Когда происходит вызов метода numbers.every(condition),
+            он перебирает все элементы массива numbers и по очереди передает их в функцию condition.
+            Если эта функция возвращает значение true для всех элементов, то и метод every() возвращает true. 
+            Если хотя бы один элемент не соответствует условию, то метод every() возвращает значение false.
+            */
+            let passed = numbers.every(condition1);
+            document.write(passed);
+            document.write("<br />");
+        }
+
+        function condition2(value, index, array) {
+            // Параметр value представляет текущий перебираемый элемент массива, 
+            // параметр index представляет индекс этого элемента, 
+            // а параметр array передает ссылку на массив.
+            let result = false;
+            if (value == 7)
+            {
+                result = true;
+            }
+            return result;
+        };
+
+        function Some()
+        {
+            document.write("some<br />");
+            let numbers = [1, -12, 7, -4, 25, 42];
+            /*
+            Метод some() похож на метод every(), только он проверяет, соответствует ли хотя бы один элемент условию. 
+            И в этом случае метод some() возвращает true. 
+            Если элементов, соответствующих условию, в массиве нет, то возвращается значение false.
+            */
+            let passed = numbers.some(condition2); 
+            document.write(passed);
+            document.write("<br />");
+        }
+
+        function condition3(value, index, array) {
+            // Параметр value представляет текущий перебираемый элемент массива, 
+            // параметр index представляет индекс этого элемента, 
+            // а параметр array передает ссылку на массив.
+            let result = false;
+            if (value > 0) {
+                result = true;
+            }
+            return result;
+        };
+
+        function Filter()
+        {
+            document.write("filter<br />");
+            let numbers = [1, -12, 7, -4, 25, 42];
+            /*
+           Метод filter(), как some() и every(), принимает функцию условия. 
+           Но при этом возвращает массив тех элементов, которые соответствуют этому условию.
+            */
+            let passed = numbers.filter(condition3);
+            document.write(passed);
+            document.write("<br />");
+        }
+
+        function square1(value, index, array) {
+
+            let result = value * value;
+            document.write("Квадрат числа " + value + " равен " + result + "<br/>");
+            document.write("<br />");
+        };
+
+        function ForEach()
+        {
+            document.write("forEach<br />");
+            let numbers = [1, 2, 3, 4, 5, 6];
+            // Метод forEach() осуществляют перебор элементов и выполняют с ними определенные операции.
+            numbers.forEach(square1);
+        }
+
+        function square2(value, index, array)
+        {
+            return result = value * value;
+        }
+
+        function Map()
+        {
+            document.write("map<br />");
+            let numbers = [1, 2, 3, 4, 5, 6];
+            // Метод map() осуществляют перебор элементов и выполняют с ними определенные операции.
+            // При этом метод map() возвращает новый массив с результатами операций над элементами массива.
+            let squareArray = numbers.map(square2);
+            document.write(squareArray);
+            document.write("<br />");
+        }
+
+        JoinDemo();
+        InputArray();
+        Push_Unshift();
+        ConcatArrayDemo();
+        Pop_Shift();
+        SpliceDemo();
+        SliceDemo();
+        Reverse();
+        LengthDemo();
+        SortArray();
+        Search();
+        Every();
+        Some();
+        Filter();
+        ForEach();
+        Map();
+        </script>
+    </body>
+</html>
