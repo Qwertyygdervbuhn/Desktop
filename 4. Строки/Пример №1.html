@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Строки</title>
+</head>
+<body>
+    <script>
+        let str;
+        let buf = "JavaScript";
+        str = "Выводит содержимое строки полужирным шрифтом  ";
+        document.write(str + buf.bold() + "<br />");
+        str = "Выводит содержимое строки курсивом  ";
+        document.write(str + buf.italics() + "<br />");
+        str = "Выводит содержимое строки перечеркнутым  ";
+        document.write(str + buf.strike() + "<br />");
+        str = "Выводит содержимое строки шрифтом на единицу большим, чем текущий  ";
+        document.write(str + buf.big() + "<br />");
+        str = "Выводит содержимое строки шрифтом на единицу меньшим, чем текущий  ";
+        document.write(str + buf.small() + "<br />");
+        str = "Выводит содержимое строки со смещением вниз относительно базовой линии  ";
+        buf = "JavaScript";
+        document.write(str + buf.sup() + "<br />");
+        str = "Выводит содержимое строки со смещением вверх относительно базовой линии  ";
+        document.write(str + buf.sub() + "<br />");
+        str = "Выводит содержимое строки моноширным шрифтом так, как будто строка заключена в теги  ";
+        document.write(str + buf.fixed() + "<br />");
+        str = "Выводит содержимое строки шрифтом указанного размера  ";
+        document.write(str + buf.fontsize(7) + "<br />");
+        str = "Выводит содержимое строки шрифтом указанного цвета  ";
+        document.write(str + buf.fontcolor("red") + "<br />");
+        str = "Возвращает содержимое строки как гиперссылку на указанный ресурс  ";
+        document.write(str + buf.link("http://www.itstep.org") + "<br />");
+        str = "Возвращает строку в верхнем регистре  ";
+        document.write(str + buf.toUpperCase() + "<br />");
+        str = "Возвращает строку в нижнем регистре  ";
+        document.write(str + buf.toLowerCase() + "<br />");
+        str = "Возвращает символ строки из указанной позиции  ";
+        document.write(str + buf.charAt(3) + "<br />");
+        str = "Возвращает позицию, с которой начинается первое вхождение подстроки  в данную строку  ";
+        document.write(str + buf.indexOf("Script") + "<br />");
+        str = "Возвращает позицию, с которой начинается последнее вхождение подстроки  в данную строку  ";
+        document.write(str + buf.lastIndexOf("Script", 1) + "<br />");
+        str = "Конкатенация строк  ";
+        document.write(str + buf.concat("  Язык клиентских сценариев  ") + "<br />");
+        str = "Возвращает часть строки от позиции start и заканчивая позицией end не включительно.";
+        document.write(str + buf.slice(0, 4) + "<br />");
+        str = "Возвращает часть строки указанной длины начиная с позиции start. ";
+        document.write(str + buf.substr(0, 4) + "<br />");
+        str = "Разбивает строку str1 на подстроки, разделяемые в строке указанным разделителем и возвращает массив подстрок.  ";
+        let A = str.split(" ");
+        document.write(str + A[0] + "      " + A[1] + "<br />");
+    </script>
+</body>
+</html>
