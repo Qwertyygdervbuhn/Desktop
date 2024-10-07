@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+ 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title>Методы объекта Element</title> 
+</head> 
+<body> 
+    <div class="article" style="color:blue"> 
+        <h3>Заголовок статьи</h3> 
+        <p>Первый абзац</p> 
+        <p>Второй абзац</p> 
+    </div> 
+    <script> 
+   
+        let articleDiv = document.querySelector("div.article"); 
+        let styleValue = articleDiv.getAttribute("style"); 
+        document.write("До изменения атрибута: " + styleValue + "<br />"); 
+        articleDiv.removeAttribute("style"); 
+        articleDiv.setAttribute("style", "color:red"); 
+        articleDiv.setAttribute("style", "background:yellow"); 
+        styleValue = articleDiv.getAttribute("style"); 
+        document.write("После изменения атрибута: " + styleValue + "<br />"); 
+    </script> 
+</body> 
+</html>
