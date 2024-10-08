@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <h1>Фон меняет цвет!
+
+    <script>
+        let colors = ["blue", "green", "coral", "pink", "yellow"];
+        let index = 0;
+
+        setInterval(function() {
+            document.body.style.backgroundColor = colors[index];
+            index = (index + 1) % colors.length;
+        }, 1000 );
+    </script>
+</body>
+</html>
