@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1</title>
-
+    <title>Task 3</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-    </style>
 
+        .test {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
     </p>
     <p class="border">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eligendi nemo est? Unde, doloribus, magnam
-        necessitatibus eos quia aliquam eaque quis aspernatur placeat sequi autem officiis, modi a exercitationem totam.
+        necessitatibus eos quia aliquam eaque quis aspernatur placeat sequi autem officiis, modi a exercitationем totam.
     </p>
     <p class="border">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi doloremque magni ut corporis, perspiciatis
@@ -45,21 +47,13 @@
 </body>
 
 <script>
-
-
-        let unorderedList = document.querySelector(".border");
-        unorderedList.style.border = "2px solid red";
-
-
-        let listItems = document.getElementsByTagName("li");
-        for (const item of listItems) {
-            item.style.margin = "2px";
-            item.style.border = "2px solid red";
-        }
-
-    /* 
-    Не совсем понял как сделать это задание. Вот два варианта работы
-    */
+   
+    let listItems = document.querySelectorAll("ul li");
+    
+   
+    for (const item of listItems) {
+        item.style.border = "1px solid red";
+    }
 </script>
 
 </html>

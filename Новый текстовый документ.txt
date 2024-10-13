@@ -4,14 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 1</title>
-
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-    </style>
-
+    <title>Task 2</title>
 </head>
 
 <body>
@@ -19,47 +12,40 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quam est debitis. Architecto quas asperiores
         blanditiis a fugiat impedit eum dolorem cum rerum dolorum iste amet, ratione assumenda expedita maiores?
     </p>
-    <p class="border">
+    <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eligendi nemo est? Unde, doloribus, magnam
         necessitatibus eos quia aliquam eaque quis aspernatur placeat sequi autem officiis, modi a exercitationem totam.
     </p>
-    <p class="border">
+    <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi doloremque magni ut corporis, perspiciatis
         tempore in, accusantium suscipit nemo quod saepe. Autem laudantium adipisci nemo magni repudiandae repellat
         error. Dolore?
     </p>
-    <ul>
-        <li>Item 01</li>
-        <li>Item 02</li>
-        <li>Item 03</li>
-        <li>Item 04</li>
-        <li>Item 05</li>
-    </ul>
-    <ul class="border">
-        <li>Item 01</li>
-        <li>Item 02</li>
-        <li>Item 03</li>
-        <li>Item 04</li>
-        <li>Item 05</li>
-    </ul>
+    <p>
+       test 2
+    </p>
+    <p>
+        test1
+    </p>
 </body>
 
 <script>
 
-
-        let unorderedList = document.querySelector(".border");
-        unorderedList.style.border = "2px solid red";
-
-
-        let listItems = document.getElementsByTagName("li");
-        for (const item of listItems) {
-            item.style.margin = "2px";
-            item.style.border = "2px solid red";
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random()* 16)];
         }
+        return color;
+    }
 
-    /* 
-    Не совсем понял как сделать это задание. Вот два варианта работы
-    */
+
+    var paragraphs = document.querySelectorAll('p');
+
+    for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.border = '2px solid ' + getRandomColor();
+    }
 </script>
 
 </html>
