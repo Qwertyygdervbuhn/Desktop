@@ -1,22 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Статические члены класса", "Статические члены класса\Статические члены класса.vcxproj", "{69EB1459-D449-4838-BEAA-9C692DE0F58E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project1", "Project1\Project1.vcxproj", "{5242A83C-A80A-44E9-83A5-17DD2802224C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Debug|Win32.ActiveCfg = Debug|Win32
 		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Debug|Win32.Build.0 = Debug|Win32
+		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Debug|x64.ActiveCfg = Debug|Win32
+		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Debug|x64.Build.0 = Debug|Win32
 		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Release|Win32.ActiveCfg = Release|Win32
 		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Release|Win32.Build.0 = Release|Win32
+		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Release|x64.ActiveCfg = Release|Win32
+		{69EB1459-D449-4838-BEAA-9C692DE0F58E}.Release|x64.Build.0 = Release|Win32
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Debug|Win32.Build.0 = Debug|Win32
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Debug|x64.ActiveCfg = Debug|x64
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Debug|x64.Build.0 = Debug|x64
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Release|Win32.ActiveCfg = Release|Win32
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Release|Win32.Build.0 = Release|Win32
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Release|x64.ActiveCfg = Release|x64
+		{5242A83C-A80A-44E9-83A5-17DD2802224C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DD67D83-45CD-41CC-8C12-9D0FBC225EB4}
 	EndGlobalSection
 EndGlobal
